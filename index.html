@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>API Table</title>
+    <link rel="stylesheet" href="./libs/css/style.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<h1>API Table</h1>
+	<table>
+		<tr>
+			<th>API Name</th>
+			<th>API Description</th>
+			<th>Parameters</th>
+		</tr>
+		<tr>
+			<td>PlaceName API</td>
+			<td>Get place name info with postcode.</td>
+			<td>
+                <label for="postcode">Post Code:</label>
+				<input type="number" id="postcode" placeholder="Enter postcode code" pattern="[0-9]" min="4">
+				<label for="country">Country Code:</label>
+				<input type="text" id="country" placeholder="Enter country code" pattern="[A-Za-z]{2}" max="2">
+				<button id="btnGetPlace">Get Info</button>
+			</td>
+		</tr>
+		<tr>
+			<td>Weather API</td>
+			<td>Get weather information for a specific location.</td>
+			<td>
+				<label for="lat">Latitude:</label>
+				<input type="number" class="lat_W" name= "lat" placeholder="Enter latitude" step="0.1">
+				<label for="lon">Longitude:</label>
+				<input type="number" class="lon_W" name="lon" placeholder="Enter longitude" step="0.1">
+				<button id="btnGetWeather">Get Weather</button>
+			</td>
+		</tr>
+		<tr>
+			<td>Timezone API</td>
+			<td>Get the timezone information for a specific location.</td>
+			<td>
+				<label for="lat">Latitude:</label>
+				<input type="number" class="lat_T" placeholder="Enter latitude">
+				<label for="lon">Longitude:</label>
+				<input type="number" class="lon_T" placeholder="Enter longitude">
+				<button id="GetTimezone">Get Timezone</button>
+			</td>
+		</tr>
+        <tr>
+            <td>CountryInfo API</td>
+            <td>Get country information</td>
+            <td>
+                <select id="selCountry">
+                    <option value="GB">Great Britain</option>
+                    <option value="FR">France</option>
+                    <option value="DE">Germany</option>
+                    <option value="US">USA</option>
+                </select>
+        
+                <select id="selLanguage">
+                    <option value="en">English</option>
+                    <option value="fr">Francais</option>
+                    <option value="de">Deutsche</option>
+                </select>
+        
+                <button id="btnRun">Run</button>
+            </td>
+        </tr>
+	</table>
+
+	<div id="divResults">
+			
+		<table>
+
+			<tr>
+				<td align="right">
+					clouds: 
+				</td>
+				<td id="cloud">
+					
+				</td>
+
+			</tr>
+
+			<tr>
+				<td align="right">
+					datetime: 
+				</td>
+				<td id="dt">
+					
+				</td>
+
+			</tr>
+
+			<tr>
+				<td align="right">
+					countrycode: 
+				</td>
+				<td id="cc">
+					
+				</td>
+
+			</tr>
+
+			<tr>
+				<td align="right">
+					temperature: 
+				</td>
+				<td id="temperature">
+					
+				</td>
+
+			</tr>
+
+
+		</table>
+
+	</div>
+    <script src="./libs/JS/script.js"></script>
+</body>
+</html>
